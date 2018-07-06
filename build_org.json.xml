@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="main">
+	<property name="package_name" value="org.json" />
+	<property name="package_version" value="0.01-Alpha" />
+	<property name="package_path" value="org/json" />
+	<property name="src" value="src" />
+	<property name="bin" value="bin" />
+	<property name="jar" value="jar" />
+	<target name="main">
+		<javac srcdir="${src}" destdir="${bin}"/>
+		<delete file="${jar}/${package_name}-${package_version}.jar"/>
+		<jar destfile="${jar}/${package_name}-${package_version}.jar" basedir="${bin}" excludes="**">
+			<fileset dir="${bin}" includes="${package_path}/**"/>
+		</jar>
+	</target>
+</project>
