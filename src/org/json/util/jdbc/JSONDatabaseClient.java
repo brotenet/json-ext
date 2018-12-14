@@ -7,7 +7,7 @@ import org.json.JSONArray;
 import org.json.exceptions.JSONException;
 import org.json.util.converters.SQLConverter;
 
-public class JDBCClient {
+public class JSONDatabaseClient {
 	
 	
 	/**
